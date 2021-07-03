@@ -54,3 +54,6 @@ dkms.conf
 
 # Tag file
 tags
+
+# macOS
+.DS_Store

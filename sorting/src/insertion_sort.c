@@ -20,7 +20,7 @@
  *     See https://stackoverflow.com/questions/17055341/why-is-insertion-sort-Θn2-in-the-average-case/17055342#17055342
  */
 
-#include "insertion_sort.h"
+#include "headers/insertion_sort.h"
 
 void insertionSort(int arr[], int n) {
 
