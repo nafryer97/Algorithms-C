@@ -57,3 +57,14 @@ tags
 
 # macOS
 .DS_Store
+
+# CMake Stuff
+CMakeCache.txt
+CMakeDoxyfile.in
+CMakeDoxygenDefaults.cmake
+CMakeFiles
+CPackConfig.cmake
+CPackSourceConfig.cmake
+Doxyfile.doc
+Makefile
+cmake_install.cmake
