@@ -9,12 +9,16 @@ project(Algorithms-C
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_STANDARD_REQUIRED YES)
 
-if(MSVC)
+if(CMAKE_C_COMPILER_ID EQUAL "GNU")
+    add_compile_options(-std=c11 -Wall -Wextra -pedantic -Og)
+elseif(CMAKE_C_COMPILER_ID EQUAL "AppleClang")
+    add_compile_options(-std=c11 -Weverything -pedantic -Og)
+elseif(CMAKE_C_COMPILER_ID EQUAL "Clang")
+    add_compile_options(-std=c11 -Weverything -pedantic -Og)
+elseif(CMAKE_C_COMPILER_ID EQUAL "MSVC")
     add_compile_definitions(_CRT_SECURE_NO_WARNINGS)
     # add_compile_options(/Za)
-else()
-    add_compile_options(-Wall -Wextra -pedantic -Og)
-endif(MSVC)
+endif()
 
 # Optional flag - can be set by user 
 # Default "ON"
