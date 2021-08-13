@@ -1,0 +1,15 @@
+include_directories("${PROJECT_SOURCE_DIR}/sorting/src")
+include_directories("${PROJECT_SOURCE_DIR}/sorting/src/headers")
+
+if(NOT CMOCKA)
+  message(WARNING "Cannot build tests without cmocka library.")
+else()
+  message(STATUS "Cmocka library found: ${CMOCKA}")
+  add_library(cmocka SHARED IMPORTED)
+  set_property(TARGET cmocka PROPERTY IMPORTED_LOCATION "${CMOCKA}")
+endif()
+
+add_executable(test_correctness test_correctness.c)
+add_dependencies(test_correctness test_correctness)
+add_test(test_correctness test_correctness)
+target_link_libraries(test_correctness insertion_sort cmocka)

@@ -63,8 +63,9 @@ CMakeCache.txt
 CMakeDoxyfile.in
 CMakeDoxygenDefaults.cmake
 CMakeFiles
-CPackConfig.cmake
+*.cmake
 CPackSourceConfig.cmake
 Doxyfile.doc
 Makefile
 cmake_install.cmake
+*.tcl

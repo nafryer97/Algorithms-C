@@ -44,32 +44,6 @@ void insertionSort(int arr[], int n) {
     printf("\n");
 }
 
-int main(int argc, char *argv[]) {
-    printf("Hello, World! This is insertion sort.\n");
-
-    int test0[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-    int test1[] = { 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 };
-    int test2[] = { 2, 1, 4, 3, 6, 5, 8, 7, 10, 9 };
-
-    printf("\tTest 1:\n");
-    printArray(test0, 10);
-    printf("\tResult:\n");
-    printArray(test0, 10);
-    insertionSort(test0, 10);
-    printf("\tTest 2:\n");
-    printArray(test1, 10);
-    insertionSort(test1, 10);
-    printf("\tResult:\n");
-    printArray(test1, 10);
-    printf("\tTest 3:\n");
-    printArray(test2, 10);
-    insertionSort(test2, 10);
-    printf("\tResult:\n");
-    printArray(test2, 10);
-
-    return 0;
-}
-
 void printArray(int arr[], int n) {
     printf("\t\tArray: { ");
     for (int i = 0; i < n; ++i) {
